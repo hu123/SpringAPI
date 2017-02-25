@@ -1,14 +1,6 @@
 package org.hl.springapi.entity;
 
-import org.springframework.jmx.export.annotation.ManagedAttribute;
-import org.springframework.jmx.export.annotation.ManagedOperation;
-import org.springframework.jmx.export.annotation.ManagedOperationParameter;
-import org.springframework.jmx.export.annotation.ManagedOperationParameters;
-import org.springframework.jmx.export.annotation.ManagedResource;
-
-
-
-public class HusbandLocal {
+public class JmxEntity {
 
     // 属性
     private String name;

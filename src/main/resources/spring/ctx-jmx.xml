@@ -9,13 +9,13 @@
           lazy-init="false">
         <property name="beans">
             <map>
-                <entry key="bean:name=HusbandLocal" value-ref="HusbandLocal" />
+                <entry key="bean:name=jmxDemo" value-ref="jmxDemo" />
             </map>
         </property>
     </bean>
 
     <!-- mbean -->
-    <bean id="HusbandLocal" class="org.hl.springapi.entity.HusbandLocal" />
+    <bean id="jmxDemo" class="org.hl.springapi.entity.JmxEntity" />
 
 
 </beans>
