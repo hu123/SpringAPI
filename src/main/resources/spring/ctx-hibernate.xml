@@ -14,6 +14,14 @@
 
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
+        <property name="hibernateProperties">
+            <!--增加了数据库方言的配置-->
+            <props>
+                <prop key="hibernate.dialect">
+                    org.hibernate.dialect.MySQLInnoDBDialect
+                </prop>
+            </props>
+        </property>
     </bean>
 
 
