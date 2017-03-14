@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--
+    第一种解决方式
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        默认的错误信息页面
+        <property name="defaultErrorView" value="error"/>
+        <property name="exceptionMappings">
+            <props>
+                <prop key="java.lang.RuntimeException">runtimeExceptionPage</prop>
+                <prop key="java.lang.ArithmeticException">arithmeticExceptionPage</prop>
+            </props>
+        </property>
+    </bean>
+
+-->
+    <!--
+        第二种方式是自己编码的方式,定制异常集中处理
+    <bean id="mySpringExceptionIntegratedHandler"
+          class="org.huluo.exceptionintegratedhandle.MySpringExceptionIntegratedHandler"/>
+-->
+</beans>
