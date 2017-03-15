@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--
+    该SpringBean中内含一个Resource对象 在注入的时候,
+    我们可以直接给他传递资源的地址而无需传递Resource的一个实例,
+    当然,如果硬要传给他一个Resource对象也是没有问题的
+    -->
+    <bean id="resourceApiEntity" class="org.huluo.springapi.resource.ResourceApiEntity">
+        <property name="resource" value="classpath:logback.xml"/>
+    </bean>
+
+
+
+</beans>
