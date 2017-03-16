@@ -5,6 +5,16 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
+  <!--
+    用于激活名字为webenv
+  <context-param>
+    <param-name>spring.profiles.active</param-name>
+    <param-value>webenv</param-value>
+  </context-param>
+-->
+
+
+
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath*:spring/ctx*.xml</param-value>
