@@ -10,6 +10,8 @@
 
     <context:component-scan
             base-package="org.huluo.spring.beanvalidation"/>
-    <bean class="org.springframework.validation.beanvalidation.BeanValidationPostProcessor"/>
+
+    <!--将Bean创建时机的Bean校验去掉,否则Spring容器启动会报Bean创建异常-->
+    <!--<bean class="org.springframework.validation.beanvalidation.BeanValidationPostProcessor"/>-->
 
 </beans>

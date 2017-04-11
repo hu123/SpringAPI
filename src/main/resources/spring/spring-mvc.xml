@@ -18,11 +18,13 @@
 
 
 
-    <context:annotation-config/>
+    <context:annotation-config />
 
-    <context:component-scan base-package="org.huluo"/>
 
-    <context:component-scan base-package="org.hl"/>
+    <context:component-scan base-package="org.huluo">
+    </context:component-scan>
+
+    <!--<context:component-scan base-package="org.hl"/>-->
 
     <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 
@@ -34,7 +36,11 @@
         <property name="prefix" value="/"/>
     </bean>
 
-
+<!--只要是符合规范的validator都可以接入到Spring中,此处的错误信息还可以国际化-->
+    <mvc:annotation-driven validator="validator"/>
+    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+        <property name="providerClass" value="org.hibernate.validator.HibernateValidator" />
+    </bean>
 <!--
        使用web.xml的如下配置代码进行激活profile
 
