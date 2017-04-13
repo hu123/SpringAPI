@@ -30,7 +30,7 @@ public class RestfulOneResourceMultiPresentationController {
     http://www.test.com/user?format=json
     */
     @RequestMapping("/user/{presentationType}")
-    public String user(@PathVariable String presentationType, Model model) {
+    public String user(@PathVariable String presentationType, Model model ) {
         User u = new User();
         model.addAttribute("User", u);
         return "User";
